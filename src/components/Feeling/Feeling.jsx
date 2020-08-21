@@ -1,9 +1,9 @@
 import React, { Component } from 'react';
-import { HashRouter as Router, Route } from "react-router-dom";
 
 class Feeling extends Component {
 
-    submitFeelings = () => {
+    submitFeelings = (event) => {
+      event.preventDefault();
         this.props.history.push('/2')
     }
 
@@ -11,9 +11,11 @@ class Feeling extends Component {
     return (
       <div>
        
-          <p>Feeling</p>
-          <button onClick={this.submitFeelings}>Next</button>
-        
+          <h2>How are you feeling today?</h2>
+          <form onSubmit={this.submitFeelings}>
+          <input type='number' placeholder='Feeling' />
+          <button type="submit">Next</button>
+          </form>
       </div>
     );
   }
