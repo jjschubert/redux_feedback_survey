@@ -6,7 +6,12 @@ class Review extends Component {
 
   submitFeedback = () => {
     console.log('submit');
-    
+    Axios.post('/feedback', this.props.reduxState.feedbackReducer)
+    .then( response => {
+      //go home
+    }).catch(error => {
+      console.log('error in POST', error);
+    })
   }
 
   render() {
