@@ -8,9 +8,8 @@ class Review extends Component {
     console.log('submit');
     axios.post('/feedback', this.props.reduxState.feedbackReducer)
     .then( response => {
-      alert('Thanks! Your feedback has been recorded')
-      //go home
-      this.props.history.push('/');
+      //go to success page
+      this.props.history.push('/success');
     }).catch(error => {
       console.log('error in POST', error);
     })

@@ -6,6 +6,7 @@ import Understanding from '../Understanding/Understanding.jsx';
 import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
+import Success from '../Success/Success.jsx';
 
 class App extends Component {
   render() {
@@ -22,6 +23,7 @@ class App extends Component {
         <Route path="/3" component={Support} />
         <Route path="/4" component={Comments} />
         <Route path="/5" component={Review} />
+        <Route path="/success" component={Success} />
         </div>
       </Router>
     );
