@@ -1,14 +1,16 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import Axios from 'axios';
+import axios from 'axios';
 
 class Review extends Component {
 
   submitFeedback = () => {
     console.log('submit');
-    Axios.post('/feedback', this.props.reduxState.feedbackReducer)
+    axios.post('/feedback', this.props.reduxState.feedbackReducer)
     .then( response => {
+      alert('Thanks! Your feedback has been recorded')
       //go home
+      this.props.history.push('/');
     }).catch(error => {
       console.log('error in POST', error);
     })

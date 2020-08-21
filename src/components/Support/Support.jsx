@@ -19,7 +19,7 @@ class Support extends Component {
        
           <h2>How well are you being supported?</h2>
           <form onSubmit={this.submitSupport}>
-          <input type='number' placeholder='Support'
+          <input required type='number' placeholder='Support'
           onChange={(event) => this.setState({support: event.target.value})} />
           <button type="submit">Next</button>
           </form>

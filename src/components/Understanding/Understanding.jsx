@@ -21,7 +21,7 @@ submitUnderstanding = (event) => {
        
           <h2>How well are you understanding the content?</h2>
           <form onSubmit={this.submitUnderstanding}>
-          <input type='number' placeholder='Understanding' 
+          <input required type='number' placeholder='Understanding' 
           onChange={(event) => this.setState({understanding: event.target.value})}/>
         <button type='submit'>Next</button>
         </form>
