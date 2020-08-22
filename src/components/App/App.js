@@ -8,6 +8,7 @@ import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
 import Success from '../Success/Success.jsx';
 import Edit from '../Edit/Edit.jsx';
+import AppBar from '@material-ui/core/AppBar';
 
 
 class App extends Component {
@@ -15,11 +16,13 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <header className="App-header">
+        <AppBar className="App-header" position="static">
             <h1 className="App-title">Feedback!</h1>
             <h4><i>Don't forget it!</i></h4>
+            <ul className='nav'>
             <li><Link to="/">Home</Link></li>
-          </header>
+            </ul>
+          </AppBar>
         <Route exact path="/" component={Feeling} />
         <Route path="/2" component={Understanding} />
         <Route path="/3" component={Support} />
