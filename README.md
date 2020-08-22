@@ -27,7 +27,7 @@ This is a feedback survey app that allows the user to collect numerical and writ
 3. Open up your editor of choice and run an npm install
 4. Run npm install axios
 5. Run npm install --save moment react-moment
-4. Install Material-UI and the following plug ins: TextField, Button, Paper and Typography.
+4. Install Material-UI and the following plug ins: TextField, Button, Paper, Typography, Radio, RadioGroup, FormControlLabel, FormControl.
 5. Run npm run server in your terminal
 6. Run npm run client in your terminal
 7. The npm run client command will open up a new browser tab for you!

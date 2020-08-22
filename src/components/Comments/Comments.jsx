@@ -24,7 +24,7 @@ class Comments extends Component {
         <Paper id='paper'>
           <Typography variant='h5'>Any comments you want to share?</Typography>
           <form onSubmit={this.submitComments}>
-            <TextField multiline variant="outlined" type='text' placeholder='Comments'
+            <TextField multiline rows={4} variant="outlined" type='text' placeholder='Comments'
               onChange={(event) => this.setState({ comments: event.target.value })} />
             <div className='submitBtn' >
               <Button variant="contained" type="submit">Next</Button>
