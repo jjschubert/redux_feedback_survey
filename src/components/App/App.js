@@ -9,6 +9,7 @@ import Review from '../Review/Review.jsx';
 import Success from '../Success/Success.jsx';
 import Edit from '../Edit/Edit.jsx';
 import AppBar from '@material-ui/core/AppBar';
+import Admin from '../Admin/Admin.jsx'
 
 
 class App extends Component {
@@ -21,6 +22,7 @@ class App extends Component {
             <h4><i>Don't forget it!</i></h4>
             <ul className='nav'>
             <li><Link to="/">Home</Link></li>
+            <li><Link to="/admin">Admin</Link></li>
             </ul>
           </AppBar>
         <Route exact path="/" component={Feeling} />
@@ -30,6 +32,7 @@ class App extends Component {
         <Route path="/5" component={Review} />
         <Route path="/success" component={Success} />
         <Route path="/edit" component={Edit} />
+        <Route path="/admin" component={Admin} />
         </div>
       </Router>
     );
