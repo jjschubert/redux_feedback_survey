@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField';
 
 class Feeling extends Component {
 
@@ -19,9 +21,9 @@ class Feeling extends Component {
        
           <h2>How are you feeling today?</h2>
           <form onSubmit={this.submitFeelings}>
-          <input required type='number' placeholder='Feeling' 
+          <TextField variant="outlined" required type='number' placeholder='Feeling' min="1" max="10"
           onChange={(event) => this.setState({feelings: event.target.value})}/>
-          <button type="submit">Next</button>
+          <Button variant="contained" type="submit">Next</Button>
           </form>
       </div>
     );

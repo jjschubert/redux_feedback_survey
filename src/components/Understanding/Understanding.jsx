@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
+import Button from '@material-ui/core/Button'
+import TextField from '@material-ui/core/TextField';
 
 
 class Understanding extends Component {
@@ -21,9 +23,9 @@ submitUnderstanding = (event) => {
        
           <h2>How well are you understanding the content?</h2>
           <form onSubmit={this.submitUnderstanding}>
-          <input required type='number' placeholder='Understanding' 
+          <TextField variant="outlined" required type='number' placeholder='Understanding' min="1" max="10"
           onChange={(event) => this.setState({understanding: event.target.value})}/>
-        <button type='submit'>Next</button>
+        <Button variant="contained" type='submit'>Next</Button>
         </form>
       </div>
     );
