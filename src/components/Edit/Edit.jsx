@@ -58,12 +58,12 @@ class Edit extends Component {
                 
                 <Paper id='paper'>
                     
-                    <TextField label="feeling" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.feeling} min="1" max="10"
-                        onChange={(event) => this.setState({ feeling: event.target.value })} />
-                    <TextField label="understanding" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.understanding} min="1" max="10"
-                        onChange={(event) => this.setState({ understanding: event.target.value })} />
-                    <TextField label="support" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.support} min="1" max="10"
-                        onChange={(event) => this.setState({ support: event.target.value })} />
+                    <TextField label="feeling" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.feeling} 
+                        onChange={(event) => this.setState({ feeling: event.target.value })} InputProps={{ inputProps: { min: 0, max: 5} }}/>
+                    <TextField label="understanding" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.understanding} 
+                        onChange={(event) => this.setState({ understanding: event.target.value })} InputProps={{ inputProps: { min: 0, max: 5} }} />
+                    <TextField label="support" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.support} 
+                        onChange={(event) => this.setState({ support: event.target.value })} InputProps={{ inputProps: { min: 0, max: 5} }}/>
                     <TextField multiline label="comments" variant="outlined" type='text' defaultValue={this.props.reduxState.feedbackReducer.comments}
                         onChange={(event) => this.setState({ comments: event.target.value })} />
                     
