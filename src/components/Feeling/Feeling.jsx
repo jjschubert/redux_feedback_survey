@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
-import './Feeling.css'
+import './Feeling.css';
+import Typography from '@material-ui/core/Typography';
 
 class Feeling extends Component {
 
@@ -22,7 +23,7 @@ class Feeling extends Component {
       <div className="container">
       <Paper id='paper'>
        
-          <h2>How are you feeling today?</h2>
+          <Typography variant='h5'>How are you feeling today?</Typography>
           <form onSubmit={this.submitFeelings}>
           <TextField variant="outlined" required type='number' placeholder='Feeling' min="1" max="10"
           onChange={(event) => this.setState({feelings: event.target.value})}/>

@@ -9,6 +9,7 @@ import TableHead from '@material-ui/core/TableHead';
 import TableCell from '@material-ui/core/TableCell';
 import TableContainer from '@material-ui/core/TableContainer';
 import Paper from '@material-ui/core/Paper';
+import './Admin.css'
 
 class Admin extends Component {
 
@@ -20,7 +21,7 @@ class Admin extends Component {
         axios.get('/feedback')
         .then( response => {
           console.log(response.data);
-          //send pizza data to redux
+          //send data to redux
           this.props.dispatch({type: 'SET_FEEDBACK', payload: response.data});
         }).catch(error => {
           console.log('error in getFeedback', error);
@@ -29,15 +30,17 @@ class Admin extends Component {
 
   render() {
     return (
-        <TableContainer component={Paper}>
+        <Paper id='adminPaper'>
+        <TableContainer>
           <Table >
-              <TableHead>
-                  <TableRow>
-                      <TableCell>Feeling</TableCell>
-                      <TableCell>Comprehension</TableCell>
-                      <TableCell>Support</TableCell>
-                      <TableCell>Comments</TableCell>
-                      <TableCell>Delete</TableCell>
+              <TableHead >
+                  <TableRow id='adminTableHead'>
+                      <TableCell id='adminLabel'>Feeling</TableCell>
+                      <TableCell id='adminLabel'>Comprehension</TableCell>
+                      <TableCell id='adminLabel'>Support</TableCell>
+                      <TableCell id='adminLabel'>Comments</TableCell>
+                      <TableCell id='adminLabel'>Date</TableCell>
+                      <TableCell id='adminLabel'>Delete</TableCell>
                       </TableRow>
               </TableHead>
               <TableBody>
@@ -51,6 +54,7 @@ class Admin extends Component {
           </Table>
          
           </TableContainer>
+          </Paper>
     );
   }
 }

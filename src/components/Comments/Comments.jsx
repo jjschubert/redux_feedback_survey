@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button'
 import { TextField } from '@material-ui/core';
 import Paper from '@material-ui/core/Paper';
-import './Comments.css'
+import './Comments.css';
+import Typography from '@material-ui/core/Typography';
 
 class Comments extends Component {
 
@@ -21,7 +22,7 @@ submitComments = (event) => {
     return (
       <div className='container'>
         <Paper id='paper'>
-        <h2>Any comments you want to share?</h2>
+        <Typography variant='h5'>Any comments you want to share?</Typography>
        <form onSubmit={this.submitComments}>
           <TextField multiline variant="outlined" type='text' placeholder='Comments' 
           onChange={(event) => this.setState({comments: event.target.value})} />

@@ -3,7 +3,8 @@ import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button'
 import TextField from '@material-ui/core/TextField';
 import Paper from '@material-ui/core/Paper';
-import './Support.css'
+import './Support.css';
+import Typography from '@material-ui/core/Typography';
 
 class Support extends Component {
 
@@ -21,7 +22,7 @@ class Support extends Component {
     return (
       <div className="container">
         <Paper id='paper'>
-          <h2>How well are you being supported?</h2>
+          <Typography variant='h5'>How well are you being supported?</Typography>
           <form onSubmit={this.submitSupport}>
             <TextField variant="outlined" required type='number' placeholder='Support' min="1" max="10"
               onChange={(event) => this.setState({ support: event.target.value })} />

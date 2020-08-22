@@ -9,7 +9,8 @@ import Review from '../Review/Review.jsx';
 import Success from '../Success/Success.jsx';
 import Edit from '../Edit/Edit.jsx';
 import AppBar from '@material-ui/core/AppBar';
-import Admin from '../Admin/Admin.jsx'
+import Admin from '../Admin/Admin.jsx';
+import Typography from '@material-ui/core/Typography';
 
 
 class App extends Component {
@@ -18,8 +19,8 @@ class App extends Component {
       <Router>
         <div className="App">
         <AppBar className="App-header" position="static">
-            <h1 className="App-title">Feedback!</h1>
-            <h4><i>Don't forget it!</i></h4>
+            <Typography variant="h2" className="App-title">Daily Feedback</Typography>
+            <Typography variant="h5"><i>Don't forget it!</i></Typography>
             <ul className='nav'>
             <li><Link to="/">Home</Link></li>
             <li><Link to="/admin">Admin</Link></li>
