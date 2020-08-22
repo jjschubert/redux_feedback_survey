@@ -11,7 +11,8 @@ class Success extends Component {
     return (
       <div className="container">
           <Paper id='paper'>
-        <h3>Thanks! Your feedback has been submitted.</h3>
+        <h3>Thanks! </h3>
+        <p>Your feedback has been submitted.</p>
         </Paper>
       </div>
     );

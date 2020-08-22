@@ -33,8 +33,8 @@ class Review extends Component {
           <p>Support: {this.props.reduxState.feedbackReducer.support}</p>
           <p>Comments: {this.props.reduxState.feedbackReducer.comments}</p>
           <div className='submitBtn' >
-            <Button variant="contained" color="primary" onClick={this.submitFeedback}>Submit</Button>
             <Button variant="contained" color="secondary" onClick={this.editFeedback}>Edit</Button>
+            <Button variant="contained" color="primary" onClick={this.submitFeedback}>Submit</Button>
           </div>
         </Paper>
       </div>
