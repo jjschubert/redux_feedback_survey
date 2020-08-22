@@ -26,4 +26,18 @@ router.get('/', (req, res) => {
     });
 })
 
+router.delete('/:id', (req, res) => {    
+    // TODO: Use filter to remove the artist
+    console.log(req.params.id)
+    let idToDelete = req.params.id
+    let queryText = `DELETE FROM "feedback" WHERE "id" = $1;`
+    
+    pool.query(queryText, [idToDelete])
+    .then(result => {
+        res.sendStatus(200)
+    }).catch(error => {
+        console.log('error in delete', error);     
+    })
+});
+
 module.exports = router;

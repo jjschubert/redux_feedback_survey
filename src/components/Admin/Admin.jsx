@@ -30,7 +30,7 @@ class Admin extends Component {
   render() {
     return (
         <TableContainer component={Paper}>
-          <Table>
+          <Table >
               <TableHead>
                   <TableRow>
                       <TableCell>Feeling</TableCell>
@@ -41,7 +41,12 @@ class Admin extends Component {
                       </TableRow>
               </TableHead>
               <TableBody>
-              <AdminItem />
+              {this.props.reduxState.feedbackDisplayReducer.map((item) => {
+                    return (
+                        <AdminItem key={item.id} item={item} getFeedback={this.getFeedback}/>
+                    )
+                })}
+              {/* <AdminItem /> */}
               </TableBody>
           </Table>
          
