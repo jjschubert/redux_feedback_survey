@@ -1,10 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button'
-import { TextField } from '@material-ui/core';
-import Paper from '@material-ui/core/Paper';
+import { TextField, Paper, Typography } from '@material-ui/core';
 import './Comments.css';
-import Typography from '@material-ui/core/Typography';
+
 
 class Comments extends Component {
 

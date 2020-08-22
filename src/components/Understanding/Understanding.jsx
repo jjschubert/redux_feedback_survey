@@ -27,7 +27,7 @@ class Understanding extends Component {
         <Paper id='paper'>
           <Typography variant='h5'>How well are you understanding the content?</Typography>
           <form onSubmit={this.submitUnderstanding}>
-            <TextField variant="outlined" required type='number' placeholder='Understanding' min="1" max="10"
+            <TextField variant="outlined" required type='number' placeholder='Understanding' min="1" max="5"
               onChange={(event) => this.setState({ understanding: event.target.value })} />
             <div className='submitBtn' >
               <Button variant="contained" type='submit'>Next</Button>

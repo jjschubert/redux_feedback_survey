@@ -25,7 +25,7 @@ class Support extends Component {
         <Paper id='paper'>
           <Typography variant='h5'>How well are you being supported?</Typography>
           <form onSubmit={this.submitSupport}>
-            <TextField variant="outlined" required type='number' placeholder='Support' min="1" max="10"
+            <TextField variant="outlined" required type='number' placeholder='Support' min="1" max="5"
               onChange={(event) => this.setState({ support: event.target.value })} />
             <div className='submitBtn' >
               <Button variant="contained" type="submit">Next</Button>

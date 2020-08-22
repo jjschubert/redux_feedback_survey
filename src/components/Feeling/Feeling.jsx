@@ -26,7 +26,7 @@ class Feeling extends Component {
        
           <Typography variant='h5'>How are you feeling today?</Typography>
           <form onSubmit={this.submitFeelings}>
-          <TextField variant="outlined" required type='number' placeholder='Feeling' min="1" max="10"
+          <TextField variant="outlined" required type='number' placeholder='Feeling' min="1" max="5"
           onChange={(event) => this.setState({feelings: event.target.value})}/>
           <div className='submitBtn' >
           <Button variant="contained" type="submit">Next</Button>
