@@ -15,6 +15,10 @@ class Review extends Component {
     })
   }
 
+  editFeedback = () => {
+    this.props.history.push('edit');
+  }
+
   render() {
     return (
       <div>
@@ -27,6 +31,7 @@ class Review extends Component {
         <p>Comments: {this.props.reduxState.feedbackReducer.comments}</p>
 
         <button onClick={this.submitFeedback}>Submit</button>
+        <button onClick={this.editFeedback}>Edit</button>
 
       </div>
     );

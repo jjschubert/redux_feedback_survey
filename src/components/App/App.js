@@ -7,6 +7,7 @@ import Support from '../Support/Support.jsx';
 import Comments from '../Comments/Comments.jsx';
 import Review from '../Review/Review.jsx';
 import Success from '../Success/Success.jsx';
+import Edit from '../Edit/Edit.jsx';
 
 class App extends Component {
   render() {
@@ -24,6 +25,7 @@ class App extends Component {
         <Route path="/4" component={Comments} />
         <Route path="/5" component={Review} />
         <Route path="/success" component={Success} />
+        <Route path="/edit" component={Edit} />
         </div>
       </Router>
     );

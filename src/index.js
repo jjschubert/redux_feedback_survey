@@ -41,6 +41,12 @@ if (action.type === 'ADD_COMMENTS') {
         comments: action.payload,
     }
 }
+if (action.type === 'ADD_EDITED_FEEDBACK') {
+    return action.payload
+}
+if (action.type === 'CLEAR_FEEDBACK') {
+    return {}
+}
     return state
 }
 
