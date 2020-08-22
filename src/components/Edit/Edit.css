@@ -1,5 +1,5 @@
-#paper {
-    height: 330px;
+#paperEdit {
+    height: 400px;
     width: 490px;
     margin: 0 auto;
     padding-top: 1em;
@@ -18,4 +18,5 @@
     margin-top: 1.5em;
     display: block;
 }
+
 

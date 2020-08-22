@@ -54,19 +54,26 @@ class Edit extends Component {
     render() {
         return (
             <div className="container">
-                <h2>Edit Your Feedback</h2>
                 
-                <Paper id='paper'>
-                    
-                    <TextField label="feeling" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.feeling} 
+                
+                <Paper id='paperEdit'>
+                <h2>Edit Your Feedback</h2>
+                <div>
+                    <TextField label="feeling" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.feeling} style = {{width: 130}} 
                         onChange={(event) => this.setState({ feeling: event.target.value })} InputProps={{ inputProps: { min: 0, max: 5} }}/>
-                    <TextField label="understanding" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.understanding} 
+                    </div>
+                    <div>
+                    <TextField label="understanding" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.understanding} style = {{width: 130}} 
                         onChange={(event) => this.setState({ understanding: event.target.value })} InputProps={{ inputProps: { min: 0, max: 5} }} />
-                    <TextField label="support" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.support} 
+                       </div>
+                        <div>
+                    <TextField label="support" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.support} style = {{width: 130}} 
                         onChange={(event) => this.setState({ support: event.target.value })} InputProps={{ inputProps: { min: 0, max: 5} }}/>
-                    <TextField multiline label="comments" variant="outlined" type='text' defaultValue={this.props.reduxState.feedbackReducer.comments}
+                    </div>
+                    <div>
+                    <TextField multiline label="comments" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.comments} style = {{width: 130}} 
                         onChange={(event) => this.setState({ comments: event.target.value })} />
-                    
+                    </div>
                     <div className='submitBtn' >
                     {/* Conditionally render done button or submit button */}
                     {this.state.viewSubmit ? <Button variant="contained" color="primary" onClick={this.submitFeedback}>Submit</Button> :
