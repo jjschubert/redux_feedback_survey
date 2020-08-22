@@ -3,6 +3,8 @@ import { connect } from 'react-redux';
 import axios from 'axios';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
+import Paper from '@material-ui/core/Paper';
+import './Edit.css';
 
 class Edit extends Component {
 
@@ -51,10 +53,10 @@ class Edit extends Component {
 
     render() {
         return (
-            <div>
+            <div className="container">
                 <h2>Edit Your Feedback</h2>
                 
-                    {/* Needs labels when material UI is added */}
+                <Paper id='paper'>
                     
                     <TextField label="feeling" variant="outlined" type='number' defaultValue={this.props.reduxState.feedbackReducer.feeling} min="1" max="10"
                         onChange={(event) => this.setState({ feeling: event.target.value })} />
@@ -65,11 +67,12 @@ class Edit extends Component {
                     <TextField multiline label="comments" variant="outlined" type='text' defaultValue={this.props.reduxState.feedbackReducer.comments}
                         onChange={(event) => this.setState({ comments: event.target.value })} />
                     
-                
+                    <div className='submitBtn' >
                     {/* Conditionally render done button or submit button */}
                     {this.state.viewSubmit ? <Button variant="contained" color="primary" onClick={this.submitFeedback}>Submit</Button> :
                     <Button variant="contained" onClick={(event) => this.closeEditor(event)}>Done</Button>}
-                    
+                    </div>
+                    </Paper>
             </div>
         );
     }

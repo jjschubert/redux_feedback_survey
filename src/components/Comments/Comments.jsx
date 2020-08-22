@@ -2,6 +2,8 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import Button from '@material-ui/core/Button'
 import { TextField } from '@material-ui/core';
+import Paper from '@material-ui/core/Paper';
+import './Comments.css'
 
 class Comments extends Component {
 
@@ -17,13 +19,17 @@ submitComments = (event) => {
 
   render() {
     return (
-      <div>
+      <div className='container'>
+        <Paper id='paper'>
         <h2>Any comments you want to share?</h2>
        <form onSubmit={this.submitComments}>
           <TextField multiline variant="outlined" type='text' placeholder='Comments' 
           onChange={(event) => this.setState({comments: event.target.value})} />
+          <div className='submitBtn' >
           <Button variant="contained" type="submit">Next</Button>
+          </div>
           </form>
+          </Paper>
       </div>
     );
   }
