@@ -3,8 +3,12 @@
   background-color: #e6effe
 }
 
+.MuiAppBar-positionStatic, 
+.MuiAppBar-colorDefault {
+  background: yellow;
+}
+
 .App-header {
-  background-color: #033076;
   min-height: 70px;
   padding: 2px;
   color: white;

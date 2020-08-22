@@ -18,22 +18,22 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-        <AppBar className="App-header" position="static">
+          <AppBar className="App-header" position="static">
             <Typography variant="h2" className="App-title">Daily Feedback</Typography>
             <Typography variant="h5"><i>Don't forget it!</i></Typography>
             <ul className='nav'>
-            <li><Link to="/">Home</Link></li>
-            <li><Link to="/admin">Admin</Link></li>
+              <li><Link to="/">Home</Link></li>
+              <li><Link to="/admin">Admin</Link></li>
             </ul>
           </AppBar>
-        <Route exact path="/" component={Feeling} />
-        <Route path="/2" component={Understanding} />
-        <Route path="/3" component={Support} />
-        <Route path="/4" component={Comments} />
-        <Route path="/5" component={Review} />
-        <Route path="/success" component={Success} />
-        <Route path="/edit" component={Edit} />
-        <Route path="/admin" component={Admin} />
+          <Route exact path="/" component={Feeling} />
+          <Route path="/2" component={Understanding} />
+          <Route path="/3" component={Support} />
+          <Route path="/4" component={Comments} />
+          <Route path="/5" component={Review} />
+          <Route path="/success" component={Success} />
+          <Route path="/edit" component={Edit} />
+          <Route path="/admin" component={Admin} />
         </div>
       </Router>
     );

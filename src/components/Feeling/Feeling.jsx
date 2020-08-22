@@ -12,6 +12,7 @@ class Feeling extends Component {
     feelings: 0
   }
 
+  //sends feedback to reducer
     submitFeelings = (event) => {
       event.preventDefault();
       this.props.dispatch({type: 'ADD_FEELINGS', payload: this.state.feelings})

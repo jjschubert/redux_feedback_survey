@@ -12,25 +12,26 @@ class Comments extends Component {
     comments: ''
   }
 
-submitComments = (event) => {
+  //sends feedback to reducer
+  submitComments = (event) => {
     event.preventDefault();
-    this.props.dispatch({type: 'ADD_COMMENTS', payload: this.state.comments})
+    this.props.dispatch({ type: 'ADD_COMMENTS', payload: this.state.comments })
     this.props.history.push('/5')
-}
+  }
 
   render() {
     return (
       <div className='container'>
         <Paper id='paper'>
-        <Typography variant='h5'>Any comments you want to share?</Typography>
-       <form onSubmit={this.submitComments}>
-          <TextField multiline variant="outlined" type='text' placeholder='Comments' 
-          onChange={(event) => this.setState({comments: event.target.value})} />
-          <div className='submitBtn' >
-          <Button variant="contained" type="submit">Next</Button>
-          </div>
+          <Typography variant='h5'>Any comments you want to share?</Typography>
+          <form onSubmit={this.submitComments}>
+            <TextField multiline variant="outlined" type='text' placeholder='Comments'
+              onChange={(event) => this.setState({ comments: event.target.value })} />
+            <div className='submitBtn' >
+              <Button variant="contained" type="submit">Next</Button>
+            </div>
           </form>
-          </Paper>
+        </Paper>
       </div>
     );
   }
@@ -38,7 +39,7 @@ submitComments = (event) => {
 
 const mapStateToProps = (reduxState) => {
   return {
-      reduxState
+    reduxState
   }
 }
 

@@ -10,9 +10,9 @@ class Success extends Component {
   render() {
     return (
       <div className="container">
-          <Paper id='paper'>
-        <h3>Thanks! </h3>
-        <p>Your feedback has been submitted.</p>
+        <Paper id='paper'>
+          <h3>Thanks! </h3>
+          <p>Your feedback has been submitted.</p>
         </Paper>
       </div>
     );
@@ -21,7 +21,7 @@ class Success extends Component {
 
 const mapStateToProps = (reduxState) => {
   return {
-      reduxState
+    reduxState
   }
 }
 

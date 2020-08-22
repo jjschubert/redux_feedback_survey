@@ -9,6 +9,7 @@ class Review extends Component {
 
   submitFeedback = () => {
     console.log('submit');
+    //pushes to feedbackReducer object to server
     axios.post('/feedback', this.props.reduxState.feedbackReducer)
       .then(response => {
         //go to success page

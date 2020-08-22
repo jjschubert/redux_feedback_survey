@@ -9,6 +9,7 @@ import axios from 'axios';
 export default function AlertDialog(props) {
   const [open, setOpen] = React.useState(false);
 
+  //sends delete request to server
   const deleteFeedback = () => {
       console.log(props.item.id);
       setOpen(false);
@@ -24,10 +25,10 @@ export default function AlertDialog(props) {
     })
 }
 
+//controls confirmation dialoge
   const handleClickOpen = () => {
     setOpen(true);
   };
-
   const handleClose = () => {
     setOpen(false);
   };

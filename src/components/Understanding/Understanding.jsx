@@ -8,30 +8,31 @@ import Typography from '@material-ui/core/Typography';
 
 
 class Understanding extends Component {
-  
+
   state = {
     understanding: 0
   }
 
-submitUnderstanding = (event) => {
-  event.preventDefault();
-  this.props.dispatch({type: 'ADD_UNDERSTANDING', payload: this.state.understanding})
+  //sends feedback to reducer
+  submitUnderstanding = (event) => {
+    event.preventDefault();
+    this.props.dispatch({ type: 'ADD_UNDERSTANDING', payload: this.state.understanding })
     this.props.history.push('/3')
-}
-  
-    render() {
+  }
+
+  render() {
 
     return (
       <div className="container">
-       <Paper id='paper'>
+        <Paper id='paper'>
           <Typography variant='h5'>How well are you understanding the content?</Typography>
           <form onSubmit={this.submitUnderstanding}>
-          <TextField variant="outlined" required type='number' placeholder='Understanding' min="1" max="10"
-          onChange={(event) => this.setState({understanding: event.target.value})}/>
-       <div className='submitBtn' >
-        <Button variant="contained" type='submit'>Next</Button>
-        </div>
-        </form>
+            <TextField variant="outlined" required type='number' placeholder='Understanding' min="1" max="10"
+              onChange={(event) => this.setState({ understanding: event.target.value })} />
+            <div className='submitBtn' >
+              <Button variant="contained" type='submit'>Next</Button>
+            </div>
+          </form>
         </Paper>
       </div>
     );
@@ -40,7 +41,7 @@ submitUnderstanding = (event) => {
 
 const mapStateToProps = (reduxState) => {
   return {
-      reduxState
+    reduxState
   }
 }
 export default connect(mapStateToProps)(Understanding);

@@ -12,6 +12,7 @@ class Support extends Component {
     support: 0
   }
 
+  //sends feedback to reducer
   submitSupport = (event) => {
     event.preventDefault();
     this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state.support })

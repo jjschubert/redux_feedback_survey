@@ -19,7 +19,7 @@ class AdminItem extends Component {
                     <TableCell>{this.props.item.comments}</TableCell>
                     <TableCell><Moment format="Do MMMM YYYY">{this.props.item.date}</Moment></TableCell>
                     <TableCell>
-                    <DeleteAlert item={this.props.item} getFeedback={this.props.getFeedback}/> </TableCell>
+                        <DeleteAlert item={this.props.item} getFeedback={this.props.getFeedback} /> </TableCell>
                 </TableRow>
             </>
         );
