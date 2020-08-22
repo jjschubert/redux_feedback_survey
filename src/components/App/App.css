@@ -1,5 +1,8 @@
+
+
 .App {
   text-align: center;
+  background-color: #e6effe
 }
 
 .App-header {
@@ -9,11 +12,20 @@
   color: white;
 }
 
+.App-header h1, h4 {
+  background-color: #033076;
+}
+
 .App-title {
   font-size: 1.5em;
 }
 
 .App-intro {
   font-size: large;
+}
+
+
+body {
+  background-color: #e6effe
 }
 

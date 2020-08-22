@@ -9,6 +9,7 @@ import Review from '../Review/Review.jsx';
 import Success from '../Success/Success.jsx';
 import Edit from '../Edit/Edit.jsx';
 
+
 class App extends Component {
   render() {
     return (
@@ -19,7 +20,6 @@ class App extends Component {
             <h4><i>Don't forget it!</i></h4>
             <li><Link to="/">Home</Link></li>
           </header>
-          <br />
         <Route exact path="/" component={Feeling} />
         <Route path="/2" component={Understanding} />
         <Route path="/3" component={Support} />
