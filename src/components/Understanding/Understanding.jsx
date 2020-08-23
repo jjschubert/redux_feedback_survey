@@ -33,7 +33,7 @@ class Understanding extends Component {
     return (
       <div className="container">
         <Paper id='paper'>
-          <Typography variant='h5'>How well are you understanding the content?</Typography>
+          <Typography variant='h5'>How well do you understand the content?</Typography>
           <form onSubmit={this.submitUnderstanding}>
           <FormControl component="fieldset" onChange={(event) => this.setState({ understanding: event.target.value })}>
               <RadioGroup >

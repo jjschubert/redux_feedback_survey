@@ -99,7 +99,7 @@ class Edit extends Component {
                     <div className='submitBtn' >
                         {/* Conditionally render done button or submit button */}
                         {this.state.viewSubmit ? <Button variant="contained" color="primary" onClick={this.submitFeedback}>Submit</Button> :
-                            <Button variant="contained" onClick={(event) => this.closeEditor(event)}>Done</Button>}
+                            <Button variant="contained" onClick={(event) => this.closeEditor(event)}>Done Editing</Button>}
                     </div>
                 </Paper>
             </div>
