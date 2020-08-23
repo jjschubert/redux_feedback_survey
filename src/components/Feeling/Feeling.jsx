@@ -8,6 +8,10 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
+import swal from 'sweetalert';
+
+
+
 
 class Feeling extends Component {
 
@@ -18,7 +22,7 @@ class Feeling extends Component {
   //sends feedback to reducer
   submitFeelings = (event) => {
     if (this.state.feelings === 0) {
-      alert('This question is required')
+      swal({text:"This question is required", icon: "warning"});
     } else {
     event.preventDefault();
     this.props.dispatch({ type: 'ADD_FEELINGS', payload: this.state.feelings })
@@ -29,8 +33,8 @@ class Feeling extends Component {
   render() {
     return (
       <div className="container">
+      
         <Paper id='paper'>
-
           <Typography variant='h5'>How are you feeling today? </Typography>
           <form onSubmit={this.submitFeelings}>
             <FormControl component="fieldset" onChange={(event) => this.setState({ feelings: event.target.value })}>

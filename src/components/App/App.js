@@ -18,7 +18,7 @@ class App extends Component {
     return (
       <Router>
         <div className="App">
-          <AppBar className="App-header" position="static">
+          <AppBar className="App-header" position="static" style={{ background: '#2E3B55' }}>
             <Typography variant="h2" className="App-title">Daily Feedback</Typography>
             <Typography variant="h5"><i>Don't forget it!</i></Typography>
             <ul className='nav'>

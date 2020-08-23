@@ -8,6 +8,7 @@ import Radio from '@material-ui/core/Radio';
 import RadioGroup from '@material-ui/core/RadioGroup';
 import FormControlLabel from '@material-ui/core/FormControlLabel';
 import FormControl from '@material-ui/core/FormControl';
+import swal from 'sweetalert';
 
 class Support extends Component {
 
@@ -18,7 +19,7 @@ class Support extends Component {
   //sends feedback to reducer
   submitSupport = (event) => {
     if (this.state.support === 0) {
-      alert('This question is required')
+      swal({text:"This question is required", icon: "warning"});
     } else {
     event.preventDefault();
     this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state.support })
