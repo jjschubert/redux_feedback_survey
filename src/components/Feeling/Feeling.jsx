@@ -17,9 +17,13 @@ class Feeling extends Component {
 
   //sends feedback to reducer
   submitFeelings = (event) => {
+    if (this.state.feelings === 0) {
+      alert('This question is required')
+    } else {
     event.preventDefault();
     this.props.dispatch({ type: 'ADD_FEELINGS', payload: this.state.feelings })
     this.props.history.push('/2')
+    }
   }
 
   render() {
@@ -30,7 +34,7 @@ class Feeling extends Component {
           <Typography variant='h5'>How are you feeling today? </Typography>
           <form onSubmit={this.submitFeelings}>
             <FormControl component="fieldset" onChange={(event) => this.setState({ feelings: event.target.value })}>
-              <RadioGroup >
+              <RadioGroup  >
                 <FormControlLabel value="1" control={<Radio />} label="1" />
                 <FormControlLabel value="2" control={<Radio />} label="2" />
                 <FormControlLabel value="3" control={<Radio />} label="3" />

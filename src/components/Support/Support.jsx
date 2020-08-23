@@ -17,9 +17,13 @@ class Support extends Component {
 
   //sends feedback to reducer
   submitSupport = (event) => {
+    if (this.state.support === 0) {
+      alert('This question is required')
+    } else {
     event.preventDefault();
     this.props.dispatch({ type: 'ADD_SUPPORT', payload: this.state.support })
     this.props.history.push('/4')
+    }
   }
 
   render() {

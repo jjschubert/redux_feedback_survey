@@ -18,9 +18,13 @@ class Understanding extends Component {
 
   //sends feedback to reducer
   submitUnderstanding = (event) => {
+    if (this.state.understanding === 0) {
+      alert('This question is required')
+    } else {
     event.preventDefault();
     this.props.dispatch({ type: 'ADD_UNDERSTANDING', payload: this.state.understanding })
     this.props.history.push('/3')
+    }
   }
 
   render() {
