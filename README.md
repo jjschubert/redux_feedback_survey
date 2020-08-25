@@ -19,7 +19,6 @@ This is a feedback survey app that allows the user to collect numerical and writ
 - Node.js
 - React
 - Material-UI
-- Moment.js
 
 ## Installation
 
@@ -52,6 +51,7 @@ This app also overs an admin view, which displays a table of feedback collected,
 - Moment.js
 - JSX
 - Material-UI
+- SweetAlert
 
 ## Acknowledgement
 
