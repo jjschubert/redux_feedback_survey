@@ -1,7 +1,5 @@
 # Feedback Survey
 
-To set up this app, you must install node modules, pg, and material-UI. You should also set up your database -- table information has been provided in the database.sql file. Once you've done those things, run your client and server. 
-
 ## Description
 
 Duration: weekend project
@@ -19,20 +17,16 @@ This is a feedback survey app that allows the user to collect numerical and writ
 - Node.js
 - React
 - Material-UI
+- PostgreSQL
 
 ## Installation
 
 1. Create your database using the name: 'prime_feedback'
 2. The queries in the data.sql file are set up to create the necessary table and populate a piece of starter data to allow the application to run correctly. The project is built on Postgres, so you will need to make sure to have that installed. We recommend using Postico to run those queries as that was used to create the queries,
 3. Open up your editor of choice and run an npm install
-4. Run npm install axios
-5. Run npm install --save moment react-moment
-6. Run npm install react, react-redux, react-router-dom
-7. Install Material-UI and the following plug ins: TextField, Button, Paper, Typography, Radio, RadioGroup, FormControlLabel, FormControl.
-8. Run npm install sweetalert --save
-9. Run npm run server in your terminal
-10. Run npm run client in your terminal
-11. The npm run client command will open up a new browser tab for you!
+4. Run npm run server in your terminal
+5. Run npm run client in your terminal
+6. The npm run client command will open up a new browser tab for you!
 
 ## Usage
 
